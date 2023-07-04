@@ -1,3 +1,17 @@
+CREATE TABLE sales (
+    id INT PRIMARY KEY,
+    quantity INT
+);
+
+INSERT INTO sales (id, quantity)
+VALUES (1, 50),
+       (2, 150),
+       (3, 200),
+       (4, 350),
+       (5, 75),
+       (6, 250),
+       (7, 120);
+
 SELECT * FROM mydatabase.sales;
 
 SELECT
@@ -6,6 +20,19 @@ SELECT
        IF(quantity BETWEEN 100 AND 300, '100-300', 'Больше 300')) AS segment
 FROM
     sales;
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    order_status INT
+);
+
+INSERT INTO orders (order_id, order_status)
+VALUES (1, 0),
+       (2, 1),
+       (3, 2),
+       (4, 0),
+       (5, NULL),
+       (6, 1);
    
 SELECT * FROM mydatabase.orders;
    
